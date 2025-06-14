@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rush Films | Productora Audiovisual</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Manrope', sans-serif; background: #0a0a23; color: white; line-height: 1.6; }
+    header { background: #0a0a23; padding: 20px; position: fixed; width: 100%; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+    header img { height: 40px; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 600; }
+    .hero { height: 100vh; background: url('https://i.postimg.cc/WbT3Pr9V/pexels-caleboquendo-9618875.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .hero h2 { font-size: 48px; color: #fff; }
+    section { padding: 100px 40px 60px; max-width: 1200px; margin: auto; }
+    section h2 { font-size: 36px; color: #ffffff; margin-bottom: 20px; text-align: center; }
+    .services, .team, .portfolio-row { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 30px; }
+    .service, .team-member, .testimonial { background: #1a1a3a; padding: 20px; border-radius: 10px; flex: 1; min-width: 250px; max-width: 300px; text-align: center; }
+    .service img, .team-member img { width: 100%; border-radius: 10px; margin-bottom: 10px; }
+    .btn { background: #ffffff; padding: 10px 20px; color: #0a0a23; text-decoration: none; display: inline-block; margin-top: 10px; border-radius: 5px; font-weight: bold; }
+    form { display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: auto; }
+    input, textarea, select { padding: 10px; border: none; border-radius: 5px; }
+    footer { background: #111; color: #888; text-align: center; padding: 20px; }
+
+    /* NUEVO: estilos para portafolio de fotos */
+    #portafolio .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    #portafolio .foto {
+      width: 300px;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      background: #22253b;
+    }
+    #portafolio .foto img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    #portafolio .foto:hover img {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.postimg.cc/j2J41Ncz/logo.png" alt="Rush Films Logo">
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#portafolio">Portafolio</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h2>Contamos historias que marcan</h2>
+  </section>
+
+  <section id="nosotros">
+    <h2>¿Quiénes somos?</h2>
+    <p style="text-align:center; max-width: 800px; margin: auto;">Rush Films es una productora audiovisual ecuatoriana comprometida con contar historias visuales que generan impacto. Creamos experiencias cinematográficas para marcas, eventos y artistas con creatividad, tecnología y un equipo apasionado.</p>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <div class="services">
+      <div class="service">
+        <img src="https://i.postimg.cc/VkNZpGnC/3a605b6cc364b5d1f04e1258dbd52503.jpg" alt="Retrato">
+        <h3>Fotografía de Retrato</h3>
+        <p>Capturamos tu esencia con retratos profesionales en estudio o exteriores.</p>
+        <p><strong>$50 por sesión</strong></p>
+        <a class="btn" href="#">Añadir al carrito</a>
+      </div>
+      <div class="service">
+        <img src="https://i.postimg.cc/GthvtNcP/a12cc3bbaf792a3ede0f5efd587123c0.jpg" alt="Eventos">
+        <h3>Eventos</h3>
+        <p>Documentamos tus momentos especiales: bodas, conciertos, lanzamientos.</p>
+        <p><strong>$150 por evento</strong></p>
+        <a class="btn" href="#">Añadir al carrito</a>
+      </div>
+      <div class="service">
+        <img src="https://i.postimg.cc/52MNmzCT/0c54c2e7148ea5ae05d702aa64c86451.jpg" alt="Alimentos">
+        <h3>Fotografía de Alimentos</h3>
+        <p>Hacemos que tus platos se vean irresistibles en carta y redes.</p>
+        <p><strong>$70 por sesión</strong></p>
+        <a class="btn" href="#">Añadir al carrito</a>
+      </div>
+      <div class="service">
+        <img src="https://i.postimg.cc/NGHK7Bny/97918199f331a3e3a53c8d1e22c2c708.jpg" alt="Arquitectura">
+        <h3>Arquitectura</h3>
+        <p>Fotos profesionales de inmuebles y espacios para real estate o portafolios.</p>
+        <p><strong>$90 por proyecto</strong></p>
+        <a class="btn" href="#">Añadir al carrito</a>
+      </div>
+      <div class="service">
+        <img src="https://i.postimg.cc/WzXCqQ0s/a3aa15338e802c4240ffb3665ce456e1.jpg" alt="Contenido Orgánico">
+        <h3>Contenido Orgánico</h3>
+        <p>Reels, videos y fotos grabadas con iPhone 16 Pro Max + DJI Osmo Pocket 3.</p>
+        <p><strong>$60 por pieza</strong></p>
+        <a class="btn" href="#">Añadir al carrito</a>
+      </div>
+      <div class="service">
+        <img src="https://i.postimg.cc/nz5WRgNr/ALQUILER-VFX-WELABPLUS.png" alt="VFX">
+        <h3>VFX</h3>
+        <p>Transformamos tus ideas en escenas cinematográficas llenas de impacto visual.</p>
+        <p><strong>$100 por escena</strong></p>
+        <a class="btn" href="#">Añadir al carrito</a>
+      </div>
+      <div class="service">
+        <img src="https://i.postimg.cc/gkcMyYxs/pexels-cottonbro-6883804.jpg" alt="Producción">
+        <h3>Producción Audiovisual</h3>
+        <p>Desde la idea hasta el montaje: comerciales, videoclips, campañas.</p>
+        <p><strong>$300 por proyecto</strong></p>
+        <a class="btn" href="#">Añadir al carrito</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="equipo">
+    <h2>Nuestro equipo</h2>
+    <div class="team">
+      <div class="team-member">
+        <img src="https://i.postimg.cc/xCLjbyf6/DAVID.jpg" alt="David Arroyo">
+        <h3>David Arroyo</h3>
+        <p>Fotógrafo</p>
+      </div>
+      <div class="team-member">
+        <img src="https://i.postimg.cc/BvQwFqJk/Imagen-de-Whats-App-2025-06-13-a-las-13-04-18-1f0461a1.jpg" alt="Santiago Arévalo">
+        <h3>Santiago Arévalo</h3>
+        <p>Videógrafo</p>
+      </div>
+      <div class="team-member">
+        <img src="https://i.postimg.cc/MHDQ1863/Imagen-de-Whats-App-2025-06-13-a-las-13-04-17-f8f2d9e2.jpg" alt="Juan Armendariz">
+        <h3>Juan Armendariz</h3>
+        <p>Editor</p>
+      </div>
+      <div class="team-member">
+        <img src="https://i.postimg.cc/JzBhLLww/Imagen-de-Whats-App-2025-06-13-a-las-13-03-49-a3487d95.jpg" alt="Nuris Nuñez">
+        <h3>Nuris Nuñez</h3>
+        <p>Asistente</p>
+      </div>
+      <div class="team-member">
+        <img src="https://i.postimg.cc/6626RK38/Imagen-de-Whats-App-2025-06-13-a-las-13-04-18-faa6acbe.jpg" alt="Juan Francisco">
+        <h3>Juan Francisco</h3>
+        <p>CEO</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="clientes">
+    <h2>Clientes satisfechos</h2>
+    <div class="services">
+      <div class="testimonial">
+        <p>“Rush Films capturó a la perfección nuestro evento. Su trabajo es impecable.”</p>
+        <strong>- María Jaramillo</strong>
+      </div>
+      <div class="testimonial">
+        <p>“Gracias a su contenido visual logramos mejorar nuestra presencia en redes.”</p>
+        <strong>- Andrés Pérez</strong>
+      </div>
+      <div class="testimonial">
+        <p>“Profesionales y creativos. Todo lo que buscábamos en una productora.”</p>
+        <strong>- Lucía Gómez</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="portafolio">
+    <h2>Portafolio</h2>
+    <div class="galeria">
+      <div class="foto">
+        <img src="https://i.postimg.cc/4x73gh7N/Imagen-de-Whats-App-2025-06-13-a-las-13-13-37-36a85e71.jpg" alt="Descripción de la foto 1" />
+      </div>
+      <div class="foto">
+        <img src="https://i.postimg.cc/tJkzpMcP/Imagen-de-Whats-App-2025-06-13-a-las-13-13-37-c6984e35.jpg" alt="Descripción de la foto 2" />
+      </div>
+      <div class="foto">
+        <img src="https://i.postimg.cc/76d57MTc/Imagen-de-Whats-App-2025-06-13-a-las-13-13-37-26c0993e.jpg" alt="Descripción de la foto 3" />
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="text" placeholder="Apellido" required>
+      <input type="tel" placeholder="Número" required>
+      <textarea placeholder="Mensaje" required></textarea>
+      <button class="btn" type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rush Films. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
